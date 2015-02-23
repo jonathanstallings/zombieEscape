@@ -1,0 +1,258 @@
+@import url("normalize.css");
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  background-color: rgb(50, 50, 50);
+  color: white;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #9d9d9d;
+}
+
+a:hover {
+  color: white;
+}
+
+button {
+  color: black;
+}
+
+header {
+  min-height: 50px;
+  width: 100%;
+  background-color: rgb(30, 30, 30);
+}
+
+h1, h2 {
+  font-family: 'Bangers', cursive;
+  margin: 0;
+}
+
+h1 {
+  font-size: 3rem;
+  text-shadow:
+    1px 1px 1px #000,
+    5px 5px 8px rgb(30,30,30);
+}
+
+p {
+  font-family: 'Shadows Into Light', cursive;
+  color: white;
+}
+
+li {
+  list-style: none;
+}
+
+nav {
+  width: auto;
+  float: left;
+}
+
+.navbar {
+}
+
+.nav {
+  margin: 0;
+  float: left;
+}
+
+.nav>li {
+  float: left;
+  position: relative;
+  display: block;
+  padding: 0 10px;
+}
+
+.nav>li>a {
+  display: block;
+  line-height: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+footer {
+  padding: 15px 15px;
+  margin: auto;
+  height: 20%;
+  width: 100%;
+  background-color: rgb(30, 30, 30);
+}
+
+img {
+  height: 100%;
+  width: auto;
+}
+
+main {
+  min-height: 800px;
+  position: relative;
+  padding: 15px 0;
+}
+
+main p {
+  font-size: 2rem;
+}
+
+#preload {
+  background:
+    url("../img/background_by_rafido-d6hu34f.jpg"),
+    url("../img/beautiful_mutations___breaking_though_background_by_velmagigglewink-d6jagig.png");
+}
+
+#dialog {
+  min-height: 50%;
+  padding: 15px 0;
+  text-align: center;
+}
+
+#approachImage {
+  display: block;
+  margin: 10px auto;
+  width: 50%;
+}
+
+#controls {
+  min-height: 10%;
+  text-align: center;
+}
+
+#console {
+  min-height: 40%;
+  width: 30rem;
+  margin: 80px auto 20px;
+}
+
+#console ul {
+  display: none;
+  padding: 1rem;
+  background-color: rgba(30, 30, 30, 0.5);
+  border: 5px solid gray;
+  border-radius: 1em;
+  box-shadow:
+    0 0 0 5px hsl(0, 0%, 70%),
+    0 0 0 10px hsl(0, 0%, 80%)
+}
+
+#console li {
+  text-align: left;
+  line-height: 1.5em;
+}
+
+#backgroundImage {
+  opacity: 0.3;
+  text-align: center;
+}
+
+#popup {
+  text-align: center;
+}
+
+#youDied {
+  color: red;
+}
+
+#youWon {
+  color: lightgreen;
+}
+
+.popupText {
+  display: none;
+  position: absolute;
+  top: 40%;
+  right: 0;
+  left: 0;
+  transform: rotate(-30deg);
+  font-size: 10rem;
+  margin: 0;
+}
+
+.logo {
+  float: left;
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 15px;
+}
+
+.overlapped {
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.faded {
+  opacity: 0.3;
+}
+
+.hidden {
+  display: none;
+}
+
+.startGame {
+
+}
+
+.playingGame {
+  display: none;
+}
+
+.endGame {
+
+}
+
+.roadClosed {
+  background: url("../img/background_by_rafido-d6hu34f.jpg") no-repeat center;
+  background-size: auto 100%;
+}
+
+.overrun {
+  background: url("../img/beautiful_mutations___breaking_though_background_by_velmagigglewink-d6jagig.png") no-repeat center;
+  background-size: cover;
+}
+
+@media (max-width: 650px) {
+
+  .wrapper {
+    padding 5px;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .wrapper {
+    padding 5px;
+  }
+
+  #console {
+    width: 20rem;
+  }
+
+  .popupText {
+    font-size: 6rem;
+  }
+}
