@@ -67,6 +67,7 @@
       game.humans = [];
       game.survivors = [];
       game.players = [];
+      game.escapees = [];
 
       //Create Participants
       game.createZombies(3);
@@ -236,9 +237,6 @@
         if (random > 7 - this.bitten) {
           this.zombify(suvivorIndex);
         }
-      } else if (this.exhausted) {
-        console.log(this.name + " is exhausted.");
-        game.consoleLog(this.name + " is exhausted.");
       }
     }
 
@@ -266,7 +264,7 @@
   Human.prototype.takeTurn = function () {
     if (!this.shot && !this.escaped) {
       this.move();
-      this.checkStatus();
+      // this.checkStatus();
     }
     this.report();
   };
@@ -324,9 +322,9 @@
       $("#approachImage").toggle();
       $("#backgroundImage").toggleClass("overrun");
       $("#youDied").show();
-      $(".playingGame").hide();
       $(".startGame").show();
     };
+    $(".playingGame").hide();
     game.consoleLog(this.name + " dies.");
     game.$console.slideToggle();
     game.$dialogText.text(fromKiller.name + " got " + this.name + "!");
@@ -334,22 +332,22 @@
       .animate({"opacity": "1", "width": "100%"}, "300");
     setTimeout(toggleBackground, [400]);
   };
-  Player.prototype.wins = function () {
+  Player.prototype.wins = function () { //still has a formatting bug with commas.
     var i, message = "";
 
-
     if (game.escapees.length > 1) {
-      for (i = 0; i < game.survivors.length; i++) {
-        if (game.survivors[i].escaped) {
-          message += game.survivors[i].name + ", ";
-        } else if (game.escapees.length === 1) {
-          message = game.escapees[0].name + " ";
+      if (game.escapees.length == 2) {
+        message = game.escapees[0].name + " and " + game.escapees[1].name;
+        } else {
+          var lastMemberIndex = game.escapees.length - 1;
+          for (i = 0; i < lastMemberIndex; i++) {
+            message += game.escapees[i].name + ", ";
+          }
+          message += "and " + game.escapees[lastMemberIndex].name;
         }
-      }
-      message += "and ";
     }
 
-    message += this.name + " escaped from the city alive!";
+    message += " escaped from the city alive!";
 
     game.consoleLog(this.name + " wins.");
     game.$console.slideToggle();

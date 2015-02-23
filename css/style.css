@@ -70,27 +70,6 @@ nav {
   float: left;
 }
 
-.navbar {
-}
-
-.nav {
-  margin: 0;
-  float: left;
-}
-
-.nav>li {
-  float: left;
-  position: relative;
-  display: block;
-  padding: 0 10px;
-}
-
-.nav>li>a {
-  display: block;
-  line-height: 20px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
 
 footer {
   padding: 15px 15px;
@@ -113,6 +92,28 @@ main {
 
 main p {
   font-size: 2rem;
+}
+
+.navbar {
+}
+
+.nav {
+  margin: 0;
+  float: left;
+}
+
+.nav>li {
+  float: left;
+  position: relative;
+  display: block;
+  padding: 0 10px;
+}
+
+.nav>li>a {
+  display: block;
+  line-height: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 #preload {
@@ -240,6 +241,11 @@ main p {
   .wrapper {
     padding 5px;
   }
+
+  .popupText {
+    font-size: 8rem;
+  }
+
 }
 
 @media (max-width: 500px) {
