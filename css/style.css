@@ -96,6 +96,17 @@ footer {
   background-color: rgb(30, 30, 30);
 }
 
+footer p {
+  margin-left: 20px;
+  font-size: .9rem;
+  color: #9d9d9d;
+  line-height: 1.2rem;
+}
+
+footer a {
+  color: lightslategray;
+}
+
 img {
   height: 100%;
   width: auto;
