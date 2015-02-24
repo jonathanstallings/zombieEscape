@@ -319,7 +319,7 @@
   };
   Player.prototype.dies = function (fromKiller) {
     var toggleBackground = function () {
-      $("#approachImage").toggle();
+      $("#approachImage").hide();
       $("#backgroundImage").toggleClass("overrun");
       $("#youDied").show();
       $(".startGame").show();
