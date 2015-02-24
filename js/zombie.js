@@ -354,6 +354,7 @@
     game.$dialogText.text(message);
     $("#youWon").show();
     $("#backgroundImage").toggleClass("roadClosed");
+    $("#approachImage").hide();
     $(".playingGame").hide();
     $(".startGame").show();
   };
