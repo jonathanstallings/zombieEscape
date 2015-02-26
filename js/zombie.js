@@ -396,6 +396,7 @@
       $("#backgroundImage").removeClass("roadClosed overrun");
       $("#approachImage").removeAttr("style");
       $(".endgame").hide();
+      $("#dialogText").text("Can you outrun the zombies and make it to safety?");
     }
 
     $(this)

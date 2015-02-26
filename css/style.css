@@ -206,6 +206,11 @@ main p {
   color: lightgreen;
 }
 
+.current {
+  color: white;
+  font-weight: bold;
+}
+
 .popupText {
   display: none;
   position: absolute;
